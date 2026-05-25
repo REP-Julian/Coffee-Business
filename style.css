@@ -1,0 +1,455 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --espresso:#1b1b1b;
+    --mocha:#5a3e36;
+    --latte:#f5efe6;
+    --soft:#ddd2c6;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--latte);
+    color:var(--espresso);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+/* Disable blur globally */
+*{
+    filter:none !important;
+    backdrop-filter:none !important;
+}
+
+/* Navigation */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(27,27,27,0.92);
+    z-index:1000;
+}
+
+nav h2{
+    color:var(--latte);
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:var(--latte);
+    text-decoration:none;
+}
+
+/* Hero */
+.hero{
+    width:100vw;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-image{
+    width:100%;
+    height:100%;
+    background:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop')
+    center/cover no-repeat;
+    transform:scale(1);
+    transition:transform 0.15s linear;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero-content p{
+    font-size:1.1rem;
+}
+
+/* Sections */
+.section{
+    padding:90px 10%;
+}
+
+.section-title{
+    color:var(--mocha);
+    margin-bottom:25px;
+    font-size:2rem;
+}
+
+.personnel-title{
+    margin-top:60px;
+}
+
+.content-box,
+.card,
+.team-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    border:1px solid var(--soft);
+}
+
+/* Grids */
+.offering-grid,
+.info-grid,
+.team-grid{
+    display:grid;
+    gap:25px;
+}
+
+.offering-grid{
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.info-grid{
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+}
+
+.team-grid{
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+.team-card{
+    text-align:center;
+}
+
+/* Contact */
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:1px solid var(--soft);
+    border-radius:8px;
+    font-family:inherit;
+}
+
+textarea{
+    resize:none;
+    min-height:140px;
+}
+
+button{
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:var(--mocha);
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+/* Footer */
+footer{
+    background:var(--espresso);
+    color:var(--latte);
+    padding:40px 10%;
+}
+
+.footer-links{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.footer-links a{
+    color:var(--latte);
+    text-decoration:none;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+}
+/* About Section Layout */
+.about-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    margin-top:30px;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h3{
+    margin-bottom:15px;
+    color:var(--mocha);
+}
+
+.about-text p{
+    margin-bottom:15px;
+}
+
+/* Circular Image */
+.about-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.about-image img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid var(--soft);
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .about-container{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .about-image img{
+        width:240px;
+        height:240px;
+    }
+}/* About Section Layout */
+.about-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    margin-top:30px;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h3{
+    margin-bottom:15px;
+    color:var(--mocha);
+}
+
+.about-text p{
+    margin-bottom:15px;
+}
+
+/* Circular Image */
+.about-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.about-image img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid var(--soft);
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .about-container{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .about-image img{
+        width:240px;
+        height:240px;
+    }
+}
+/* Coffee Offering Layout */
+.offering-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    margin-top:30px;
+}
+
+/* Rounded Square Image */
+.offering-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.offering-image img{
+    width:340px;
+    height:340px;
+    object-fit:cover;
+    border-radius:35px;
+    border:6px solid var(--soft);
+}
+
+/* Description */
+.offering-text{
+    flex:1;
+}
+
+.offering-text h3{
+    color:var(--mocha);
+    margin-bottom:15px;
+}
+
+.offering-text p{
+    margin-bottom:15px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .offering-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .offering-image img{
+        width:260px;
+        height:260px;
+    }
+}
+/* Key Information Card */
+.keyinfo-card{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    background:white;
+    border:1px solid var(--soft);
+    border-radius:35px;
+    padding:25px;
+    overflow:hidden;
+    margin-top:30px;
+}
+
+/* Left Landscape Image */
+.keyinfo-image{
+    flex:1;
+}
+
+.keyinfo-image img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:25px;
+    display:block;
+}
+
+/* Right Content */
+.keyinfo-content{
+    flex:1;
+}
+
+.keyinfo-content h3{
+    color:var(--mocha);
+    margin-bottom:20px;
+}
+
+.keyinfo-item{
+    margin-bottom:20px;
+}
+
+.keyinfo-item h4{
+    margin-bottom:6px;
+    color:var(--espresso);
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .keyinfo-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .keyinfo-image img{
+        height:220px;
+    }
+}
+/* Personnel Card */
+.team-card{
+    background:white;
+    border:1px solid var(--soft);
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+}
+
+/* Top Text */
+.team-info{
+    margin-bottom:20px;
+}
+
+.team-info h3{
+    color:var(--mocha);
+    margin-bottom:5px;
+}
+
+.team-info p{
+    color:var(--espresso);
+}
+
+/* Bottom Image */
+.team-image{
+    display:flex;
+    justify-content:center;
+}
+
+.team-image img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid var(--soft);
+}
